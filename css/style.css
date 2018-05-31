@@ -1,0 +1,42 @@
+body{
+
+}
+/* start top-header*/
+.header{
+	background-color: #fff;
+}
+.top-container{
+	width: 1000px;
+	margin: 0 auto;
+	height: 160px;
+	border: 1px solid red;
+}
+
+.banner{
+	height: 380px;
+}
+/*end top-header */
+
+.wrapper{
+
+}
+
+
+.content{
+	width: 1000px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-areas: "header header header"
+					     "main right";
+}
+.main{
+	grid-area: main;
+	background: red;
+}
+
+
+
+footer{background: #ccc;color: #fff;}
+.footer-content{
+	grid-area: footer;
+}
