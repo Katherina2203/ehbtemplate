@@ -5,14 +5,14 @@
 		 <meta http-equiv="Content-Type" content="IE=edge">
 		  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 		  <title>ehb</title>
-		 <link rel="stylesheet/less" href="css/style.css">
-		 <link rel="stylesheet/less" href="css/main.css">
+  		
 		  <link rel="stylesheet/less" href="css/core.css">
+		  <link rel="stylesheet/less" href="css/header.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.2/less.min.js" ></script>
 		
 	</head>
 	<body>
-	<div class="wrapper">
+	<div class="wrapper grid">
 		<header class="top-header">
 				<div class="banner">
 					<div class="background-logo">
@@ -36,8 +36,9 @@
 					</div>
 			    </div>
 				
-				<div class="main-navigation">
-					<ul>
+				<nav class="main-navigation container">
+					<div class="menu">
+						<ul>
 						<li><a href="">Главная</a></li>
 						<li><a href="">Об объединении</a></li>
 						<li><a href="">Служения</a></li>
@@ -45,10 +46,14 @@
 						<li><a href="">Статьи</a></li>
 						<li><a href="">Контакты</a></li>
 					</ul>
-				</div>
+					</div>
+					<div class="social">
+						
+					</div>
+				</nav>
 	    </header>
 
-		<div class="content">
+		<div class="content container">
 			<div class="article">
 				<p>
 					Роджер Йоханссон в своём блоге «456 Berea Street» предостерегал от употребления этого свойства и призывал отказаться от него напрочь, потому что однажды столкнулся с сайтом, на котором это свойство имело значение «none» и привело к тому, что размер шрифта нельзя было увеличить не только в мобильнике, но и в обыкновенном компьютере (нажатием «Command-Plus») ни в одном из браузеров на основе WebKit: ни в Safari, ни в Chrome, ни в OmniWeb, ни в iCab…
@@ -71,32 +76,42 @@
 		</aside>
 		</div>
 
-		<footer>
-			<div class="footer-content">
-				<div class="box-footer">
-					<h3>Contacts</h3>
-					<span>
-						
-					</span>
+		<footer class="footer-content">
+			<div class="container grid">
+				<div class="box">
+					<h3>Контакты</h3>
+					<ul>
+						<li><a href="">Contatct</a></li>
+						<li><a href="">Contatct</a></li>
+						<li><a href="">Contatct</a></li>
+					</ul>
 					
 				</div>
-				<div class="box-footer">
-					<h3>About us</h3>
+				<div class="box">
+					<h3>Информация о нас</h3>
 					<ul>
-						<li>Contatct</li>
-						<li>Contatct</li>
-						<li>Contatct</li>
+						<li><a href="">Вероучения</a></li>
+						<li><a href="">Фотогаллерея</a></li>
+						<li><a href="">Новости</a></li>
+						<li><a href="">Церкви</a></li>
+						<li><a href="">Наша история</a></li>
 					</ul>
 				</div>
-				<div class="box-footer">
-					<h3>Resources</h3>
+				<div class="box">
+					<h3>Ресурсы</h3>
 					<ul>
-						<li>Contatct</li>
-						<li>Contatct</li>
-						<li>Contatct</li>
+						<li><a href="">Статьи</a></li>
+						<li><a href="">Онлайн трансляции</a></li>
+						<li><a href="">События</a></li>
 					</ul>
 				</div>
-				<div class="box-footer-long"></div>
+				<div class="box long">
+					<p>Подпишитесь на нашу рассылку</p>
+					<p>Подпишитесь на were recently introduced in Photoshop CC and are very </p>
+					<input type="text"> 
+					<button>Подписаться</button>
+					<p>Подпишитесь на нашу рассылку</p>
+				</div>
 			</div>
 		</footer>
 		</div>
