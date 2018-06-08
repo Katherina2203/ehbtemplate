@@ -15,6 +15,13 @@ h3{
 .grid{
 	display: grid;
 }
+
+.title-center{
+	text-align: center;
+	padding: @gutter 0;
+	margin: @widebottom;
+}
+
 .wrapper{
 	grid-template-columns: repeat(1, 1fr);
 
@@ -28,65 +35,87 @@ h3{
 }
 //header mainpage
 header{
-	 grid-area: header;
-    height: 60wh;
-
+	grid-area: header;
+	
 }
-.banner{
-	position:relative;
-    height: 60vh;
-	.background-logo{
-		
-		background: #8AAEBE;/*6391a8;*/
-		
-		margin-right:10px;
 
-		a,p,h2,span{
-			color: #fff;
-		}
+.header-content{
+	min-height: 60vh;
+    .grid{
+    	grid-template-columns: 1fr 1fr;/*repeat(2, minmax(20%, 45%));*/
+    	grid-template-areas: 
+						    "logo img"
+						    "logo underline";
+		-ms-grid-rows: minmax(100vh, 1fr);				    
+    	grid-gap: 10px;
+    	justify-item: center;
+    	align-item: center;
+    }
+
+ .background-left{
+		grid-area: logo;
+	 	background-color: @headercolor;
+     	min-height: 60vh;
+
+	}
+	.container-logo{
+		border: 1px solid red;
+		color: #fff;
+		width: 30%;
+		align-item: right;
+
 		.logo{
+			
+		
 			.small-description{
-				font-size: 10px;
+			font-size: 10px;
 			}
 		}
 		.description{
 			width: 250px;
+
 			button{
-				border: 1px solid black;
+				padding: 7px;
+
 			}
 		}
-		
-		&:after{
-			transform: rotate(45deg);
-			right: -31px;
-			bottom: -25px;
-		}
-	}
-	.banner-img{}
-	.background-img-underline{
-	 	background: linear-gradient(to right, @accentcolor, #f2e0ca);
-	 	height: 15px;
-	 	margin-top: 10px;
 	}
 
-}
+	.banner-img{
+		grid-area: img;
+		background-position:right;
+		min-height: 60vh;
+	}
+	.background-img-underline{
+		grid-area: underline;
+	 	background: linear-gradient(to right, @accentcolor, #f2e0ca);
+	 	height: 15px;
+	 	align-utems: end;
+	}
+  }
+   
+
+ 
+
 // end header mainpage
 
 
 //content
 .content{
-	
+
 
 	.main-news{
 		grid-template-columns: repeat(2, 50%);
 		grid-gap: 1px 10px;
 	
 		.box{
-			img{
+			margin-bottom: @gutter;
 			
+			img{
 				height: 84px;
 				width: 126px;
 				border-radius: 4px;
+
 			}
 			p{
 				
@@ -99,26 +128,30 @@ header{
 		background: #f9f3e7;
 		
 		.grid{
-			grid-template-columns: repeat(3, 33%);
+			grid-template-columns: 1fr 1fr 1fr;
 			grid-gap: 5px 25px;
+				
 			// тут background по центру иконка
 		}
 		.box{
-			margin-bottom: 30px;
+			margin-bottom: @widebottom;
+			text-align: center;
 		}
 		.date-title{
 			color: @accentcolor;
 			text-transform: uppercase;
+			line-height: 1.8;
 		}
 
 	}
 	.region-serving{
-		margin-bottom: 40px;
+		margin-bottom: @widebottom;
 		.grid{
-			grid-template-columns: repeat(3, 33%);
+			grid-template-columns: 1fr 1fr 1fr;
 			grid-gap: @gutter;
 			aling-items: center;
 			justify-items: center;
+
 		}
 		.box{
 			text-align: center;
@@ -161,7 +194,7 @@ header{
 			grid-template-columns: repeat(2, minmax(30% 150px));
 			grid-gap: @gutter;
 			align-items: start;
-
+			display: flex;
 		}
 		.articles{
 			border: 1px solid blue;
