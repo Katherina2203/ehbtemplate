@@ -3,6 +3,7 @@
  * -----------------
  */
  @import "variables";
+  @import "_mixins";
 
  .ehb-gallery{
  	h3{
@@ -12,6 +13,7 @@
  	.btn-archive{
  		display: flex;
  		justify-content: normal;
+ 		.transitions;
 
  		.btns{
  		padding: 7px 15px;
@@ -27,24 +29,18 @@
  		&:focus, 
  		&:active{
  			color: #fff;
- 			background: @accentcolor;
+ 			background-color: saturate(@accentcolor, 20%);
  		}
  	}
  	}
 
  	.ehb-cat-imgs{
- 		
-
-	 	.grid{
-	 		grid-template-column: repeat(2, 50%);
-	 	
-	 		justify-item: center;
-    		align-items: center;
-	 	}
+	 	display: flex;
+	 	padding: @gutter 0;
 	 	.box{
-
+	 		display: block;
 	 		border: 1px solid #f6f6f6;
-	 		width: 250px;
+	 		max-width:150px;
 	 		text-align: center;
 	 		figcaption h3{
 	 			font-size: 14px;

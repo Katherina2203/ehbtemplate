@@ -7,13 +7,15 @@
 		  <title>ehb</title>
   		
 		  <link rel="stylesheet/less" href="css/core.css">
-		  <link rel="stylesheet/less" href="css/header.css">
+		  <link rel="stylesheet/less" href="css/gallery.css">
+		  <link rel="stylesheet/less" href="css/page.css">
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.2/less.min.js" ></script>
 		
 	</head>
 	<body>
 	<div class="wrapper grid">
-		<header class="top-header">
+		<header class="header-content">
 				<div class="banner">
 					<div class="background-logo">
 						<div class="logo">
@@ -35,45 +37,97 @@
 						
 					</div>
 			    </div>
-				
-				<nav class="main-navigation container">
-					<div class="menu">
+		</header>
+				<nav class="main-navigation">
+					<div class="container grid">
+						<div class="menu">
 						<ul>
-						<li><a href="">Главная</a></li>
-						<li><a href="">Об объединении</a></li>
-						<li><a href="">Служения</a></li>
-						<li><a href="">Новости</a></li>
-						<li><a href="">Статьи</a></li>
-						<li><a href="">Контакты</a></li>
-					</ul>
+							<li><a href="">Главная</a></li>
+							<li><a href="">Об объединении</a></li>
+							<li><a href="">Служения</a></li>
+							<li><a href="">Новости</a></li>
+							<li><a href="">Статьи</a></li>
+							<li><a href="">Контакты</a></li>
+						</ul>
 					</div>
-					<div class="social">
-						
+					<div class="search">
+						<input type="text">
+						<button>Search</button>
 					</div>
+					</div>
+			
 				</nav>
-	    </header>
+	  
 
-		<div class="content container">
-			<div class="article">
-				<p>
-					Роджер Йоханссон в своём блоге «456 Berea Street» предостерегал от употребления этого свойства и призывал отказаться от него напрочь, потому что однажды столкнулся с сайтом, на котором это свойство имело значение «none» и привело к тому, что размер шрифта нельзя было увеличить не только в мобильнике, но и в обыкновенном компьютере (нажатием «Command-Plus») ни в одном из браузеров на основе WebKit: ни в Safari, ни в Chrome, ни в OmniWeb, ни в iCab…
-				</p>
-				<p>Несмотря на это, WebKit — не единственная основа мобильных браузеров; как мы знаем, существует ещё и мобильный Firefox. Разработчики Firefox объявили в вики MDN, что Firefox 11 и более новых версий также станет поддерживать свойство «text-size-adjust», которое, таким образом, становится ещё более кроссбраузерным. (Как XaocCPS мне подсказывает, это свойство под именем «-ms-text-size-adjust» поддерживается также и в Windows Phone 7.)
+		<div class="content grid">
+			<div class="container grid">
+				<div class="ehb-content">
+	
+					<p>
+						Роджер Йоханссон в своём блоге «456 Berea Street» предостерегал от употребления этого свойства и призывал отказаться от него напрочь, потому что однажды столкнулся с сайтом, на котором это свойство имело значение «none» и привело к тому, что размер шрифта нельзя было увеличить не только в мобильнике, но и в обыкновенном компьютере (нажатием «Command-Plus») ни в одном из браузеров на основе WebKit: ни в Safari, ни в Chrome, ни в OmniWeb, ни в iCab…
+					</p>
+					<p>Несмотря на это, WebKit — не единственная основа мобильных браузеров; как мы знаем, существует ещё и мобильный Firefox. Разработчики Firefox объявили в вики MDN, что Firefox 11 и более новых версий также станет поддерживать свойство «text-size-adjust», которое, таким образом, становится ещё более кроссбраузерным. (Как XaocCPS мне подсказывает, это свойство под именем «-ms-text-size-adjust» поддерживается также и в Windows Phone 7.)
 
-				</p>
-			</div>
+					</p>
+				
+					<section class="ehb-gallery">
+						<h3>Фотогаллерея</h3>
+						<div class="btn-archive">
+							<a href="" class="btns">2017</a>
+							<a href="" class="btns">2016</a>
+							<a href="" class="btns">2015</a>
+							<a href="" class="btns">2014</a>
+							<a href="" class="btns">2013</a>
+						</div>
+						<div class="ehb-cat-imgs">
+							<div class="box">
+								<a href=""><img src="img/thumb_news.jpg" alt=""></a>
+								<figcaption><h3><a href="">Служение сестрам</a></h3></figcaption>
+								<span>location</span>
+								<span class="date">25-05-2016</span>
+							</div>
+							
+							<div class="box">
+								<a href=""><img src="img/thumb_news.jpg" alt=""></a>
+								<figcaption><h3><a href="">Служение сестрам</a></h3></figcaption>
+								<span>location</span>
+								<span class="date">25-05-2016</span>
+							</div>
+							<div class="box">
+								<a href=""><img src="img/thumb_news.jpg" alt=""></a>
+								<figcaption><h3><a href="">Служение сестрам</a></h3></figcaption>
+								<span>location</span>
+								<span class="date">25-05-2016</span>
+							</div>
+							<div class="box">
+								<a href=""><img src="img/thumb_news.jpg" alt=""></a>
+								<figcaption><h3><a href="">Служение сестрам</a></h3></figcaption>
+								<span>location</span>
+								<span class="date">25-05-2016</span>
+							</div>
+							
+							</div>
+				
+				</section>
+				</div>
+					
 
-		<aside class="sidebar">
-			<div class="leftmenu">
-				<ul>
-					<li><a href="">Link1</a></li>
-					<li><a href="">Link2</a></li>
-					<li><a href="">Link3</a></li>
-					<li><a href="">Link4</a></li>
-					<li><a href="">Link5</a></li>
-				</ul>
-			</div>
-		</aside>
+			
+			
+				
+
+			<aside class="sidebar">
+				<div class="leftmenu">
+					<ul>
+						<li><a href="">Link1</a></li>
+						<li><a href="">Link2</a></li>
+						<li><a href="">Link3</a></li>
+						<li><a href="">Link4</a></li>
+						<li><a href="">Link5</a></li>
+					</ul>
+				</div>
+			</aside>
+	
 		</div>
 
 		<footer class="footer-content">

@@ -3,13 +3,13 @@
  colors, variables
  * -------------------------
  */
+ @import "variables";
+ @import "_gallery";
+  @import "_mixins";
+
 @import url('https://fonts.googleapis.com/css?lang=ru&family=Product+Sans|Roboto:400,700');
-@accentcolor: #F8A342; //check color with mockup
-@headercolor: #2784b2;
-@mainlightorange:#f8f7f3;
-@maingray: #8aaebe;
-@gutter: 20px;
-@widebottom: 40px;
+
+
 
 
 /*
@@ -23,7 +23,13 @@ https://fonts.google.com/specimen/Roboto
 }
 h3{
 	color: #2784b2;
-	padding: 10px;
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+.title-uppercase{
+	margin: @gutter 0;
+	text-decoration: uppercase;
 }
 img {
 	display: block;
@@ -32,13 +38,12 @@ img {
 }
 
 body{
-	font-family: 'Helvetica', Arial, sans-serif; //checked with mockup
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: 400;
   	overflow-x: hidden;
- 	 overflow-y: auto;
- 	 height: 100%;
+ 	overflow-y: auto;
+ 	height: 100%;
 }
-
 
 .wrapper{
 		grid-template-columns: repeat(2, 1fr);
@@ -84,7 +89,7 @@ nav{
 
 .menu{
 	grid-area: menu;
-
+ 	.transitions;
 
 	ul{
 		display: flex;
@@ -101,12 +106,12 @@ nav{
 	}
 	ul li a{
 		color: #293036;
-
+		border-radius: 10px;
+		padding: 10px;
 		&:focus,
 		&:hover, &:active{
 				border: 1px solid @accentcolor;
-				border-radius: 4px;
-				padding: 10px;
+				
 				color: @accentcolor;
 		}
 	}
@@ -124,6 +129,7 @@ nav{
 /* end menu*/
 
 /*  content  */
+
 .content{
 	grid-area: content;
 	min-height: 100%;
@@ -137,14 +143,29 @@ nav{
 		margin-bottom: 5px;
 		color: gray;
 	}
+
+	.grid{
+		grid-template-columns: minmax(100vh, 1fr);
+		grid-template-areas: "ehbcontent sidebar";
+
+	}
+	.ehb-content{
+		grid-area: ehbcontent;
+	}
+	aside{
+		grid-area: sidebar;
+		width: 150px;
+		padding: 20px;
+		border: 1px solid blue;
+	}
+	section{
+	margin-bottom: @widebottom;
+	}
+
 }
 
 //aside left menu
-aside{
-	grid-area: sidebar;
-	padding: 20px;
-	border: 1px solid blue;
-}
+
 
 .leftmenu{
 		ul{
@@ -173,15 +194,20 @@ aside{
 /*  footer  */
 footer{
 	grid-area: footer;
-	display:subgrid;
+	/*display: subgrid;*/
 	background-color: @maingray;
-	color: #fff;
+	
+	padding: @gutter;
 
 	.grid{
 		grid-template-columns: 20% 20% 20% auto;
 		grid-gap: @gutter;
 
 
+	}
+	h3{
+		color: #fff;
+		.title-uppercase;
 	}
 	.long{
 		grid-row: 1/4;
@@ -190,11 +216,15 @@ footer{
 	list-style-type: none;
 	}
 	a{
-		color: #fff;
+		
 		text-decoration: none;
-		&:hover{
+		&:hover, &:focus, &:active{
 			text-decoration: underline;
 		}
 	}
 }
+footer * {
+	color: #fff;
+}
 /*  end footer  */
+@import "_media";
