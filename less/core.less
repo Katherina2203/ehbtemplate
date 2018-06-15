@@ -161,12 +161,13 @@ nav{
 	/* breadcrumbs */
 	.breadcrumbs{
 		a{
-			
+			text-decoration: underline;
+
 		&:after{
 			content: ' / ';
 		}
 		&:last-child{
-			content: ' ';
+			content: '';
 			color: @accentcolor;
 		}
 		}
@@ -195,6 +196,10 @@ nav{
 				float: left;
 				border-radius: 4px;
 			}
+		}
+
+		.church-map{
+			padding: @gutter 0;
 		}
 	}
 
@@ -225,6 +230,27 @@ nav{
 			}
 		}
 	}
+	.box{
+		padding-top: @gutter;
+		display: flex;
+		/*align-items: flex-start;*/
+ 		flex-wrap: wrap;
+ 		align-content: space-around;
+
+		.church-info{	
+			width: 40%;
+			margin-bottom: @widebottom;
+
+			span{
+				font-weight: 600;
+			}
+			h4{
+				font-weight: normal;
+			}
+		}
+
+	}
+	
 }
 
 
