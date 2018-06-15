@@ -37,6 +37,13 @@ img {
 
 }
 
+a{
+	text-decoration: none;
+	&:hover{
+		text-decoration: underline;
+	}
+}
+
 body{
     font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: 400;
@@ -133,7 +140,10 @@ nav{
 .content{
 	grid-area: content;
 	min-height: 100%;
-	
+	h2{
+		padding: 15px 0;
+	}
+
 	p{
 	 	word-break: break-word;
 	}
@@ -143,53 +153,80 @@ nav{
 		margin-bottom: 5px;
 		color: gray;
 	}
+	
+	section{
+		margin-bottom: @widebottom;
+	}
+
+	/* breadcrumbs */
+	.breadcrumbs{
+		a{
+			
+		&:after{
+			content: ' / ';
+		}
+		&:last-child{
+			content: ' ';
+			color: @accentcolor;
+		}
+		}
+		
+	}
+	/* end breadcrumbs */
 
 	.grid{
-		grid-template-columns: minmax(100vh, 1fr);
+		display: grid;
+		grid-template-columns: auto 250px;
 		grid-template-areas: "ehbcontent sidebar";
-
+		align-content: end;
 	}
+
 	.ehb-content{
 		grid-area: ehbcontent;
+		margin-bottom: @widebottom;
+
+		.box{
+			min-height: 170px;
+			margin-bottom: @gutter;
+
+			img{
+				padding: 7px;
+				min-height: 120px;
+				float: left;
+				border-radius: 4px;
+			}
+		}
 	}
+
 	aside{
 		grid-area: sidebar;
-		width: 150px;
-		padding: 20px;
-		border: 1px solid blue;
-	}
-	section{
-	margin-bottom: @widebottom;
+		margin-left: @widebottom;
 	}
 
-}
+	//aside left menu
 
-//aside left menu
-
-
-.leftmenu{
-		ul{
-		 list-style-type:none;
+	.nav-category{
+		h3{
+			color: #000;
+			margin-bottom: @gutter;
 		}
+		ul{
+			list-style-type: none;
 	
+		}
+		ul li a{
+			color: #2e2e2e;
+			font-size: 12px;
+			font-weight: 600;
+			line-height: 1.8;
+			&:focus,
+			&:hover, &:active{
+				color: @accentcolor;
+			}
+		}
+	}
 }
 
-.leftmenu ul li a{
-	text-decoration: none;
-}
-.leftmenu ul li a:hover{
-	text-decoration: underline;
-	color: @accentcolor;
-}
-.leftmenu ul li a:active{
-	text-decoration: underline;
-	color: @accentcolor;
-}
-
-/* photogallery  */
-
-
-/* end photogallery  */
 
 /*  footer  */
 footer{

@@ -3,7 +3,7 @@
  * -----------------
  */
  @import "variables";
-  @import "_mixins";
+ @import "_mixins";
 
  .ehb-gallery{
  	h3{
@@ -14,17 +14,21 @@
  		display: flex;
  		justify-content: normal;
  		.transitions;
+ 
+ 			margin-bottom: @gutter;
+ 		
 
  		.btns{
  		padding: 7px 15px;
- 		border: 1px solid #000;
+ 		border: 2px solid #393939;
  		border-radius: 10px;
  		margin-right: @gutter;
  	}
 
  	a{
  		text-decoration: none;
- 		font-size: 12px;
+ 		font-size: 14px;
+ 		font-weight: 600;
  		&:hover, 
  		&:focus, 
  		&:active{
@@ -33,25 +37,26 @@
  		}
  	}
  	}
+/*  end buttons archive */
+
 
  	.ehb-cat-imgs{
-	 	display: flex;
-	 	padding: @gutter 0;
 	 	.box{
-	 		display: block;
+	 		display: inline-block;
 	 		border: 1px solid #f6f6f6;
-	 		max-width:150px;
+	 		border-radius: 5px;
+	 		width: 45%;
 	 		text-align: center;
-	 		figcaption h3{
+			margin-bottom: @gutter;
+	 		padding-bottom: @widebottom;
+	 		img{
+	 			
+	 			width: 93%;
+			}
+	 		
+	 		h3{
 	 			font-size: 14px;
 	 		}
-	 		img{
-	 			height: 250px;
-				
-	 		}
 	 	}
-
  	}
-
-
  }
