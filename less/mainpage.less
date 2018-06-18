@@ -42,7 +42,7 @@ header{
 .header-content{
 	min-height: 60vh;
     .grid{
-    	grid-template-columns: 1fr 1fr;/*repeat(2, minmax(20%, 45%));*/
+    	grid-template-columns: 1fr 1fr;/*repeat(2, minmax(10%, 85%));*/
     	grid-template-areas: 
 						    "logo img"
 						    "logo underline";
@@ -59,23 +59,48 @@ header{
 
 	}
 	.container-logo{
-		border: 1px solid red;
 		color: #fff;
 		width: 30%;
-		align-items: center;
+		padding: @widebottom*2 0;
 
 		.logo{
+			width: 150px;
+			text-align: center;
+			margin-bottom:  @widebottom;
+			border: 1px solid green;
+
+			img{
+				margin: 0 auto;
+			}
 			.small-description{
 			font-size: 10px;
+		
 			}
 		}
 		.description{
-			width: 250px;
-
-			button{
-				padding: 7px;
-
+			width: 300px;
+			h2{
+				line-height: 2.5;
 			}
+			.header-buttons{
+				padding: @gutter 0;
+			/*	display: flex;*/
+				display: block;
+				
+			
+				text-align: center;
+
+				button{
+					padding: 10px 17px;
+					opacity: 0.8;
+					.transitions;
+
+					&:hover, &:focus, &:active{
+						opacity: 1;
+					}
+				}
+			}
+			
 		}
 	}
 
@@ -94,69 +119,110 @@ header{
   }
 
 // end header mainpage
-
+.box{
+			display: block;
+			box-sizing: border-box;
+}
 
 //content
 .content{
 	.main-news{
-		grid-template-columns: repeat(2, 50%);
-		grid-gap: 1px 10px;
+		grid-template-columns: repeat(2, 47%);
+		grid-gap: @widebottom;
 	
 		.box{
-			display: block;
-			box-sizing: border-box;
-			margin-bottom: @gutter;
+			.box;
 			min-height: 80px;
 			min-width: 126px;
-			
-			img{
-				padding: 7px;
-				border-radius: 4px;
-			/*	object-fit: cover*/
 
-				width: 150px;
-			    height: 100px;
-			    background-image: url("img/thumb_news.jpg");
-			    background-size: cover;
-			    background-repeat: no-repeat;
-			    background-position: 50% 50%;
+  			.content-news{
+  				display: flex;
+  			}
+			.news-img{
+				padding-right: 10px;
+				padding-top: 10px;
+				img{
+					border-radius: 4px;
+					object-fit: cover;
+				    overflow: hidden;
+					width: 150px;
+				    height: 100px;
+				    background-image: url("img/thumb_news.jpg");
+				    background-size: cover;
+				    background-repeat: no-repeat;
+				    background-position: 50% 50%;
+				}
+			}
+			h3{
+				color: #000;
 			}
 		}
 	}
 
 	.main-events{
 		background: #f9f3e7;
-		
+		/*height: 720px;*/
+		margin-bottom: @widebottom;
+
+		.container{
+			vertical-align: bottom;
+
+		}
 		.grid{
-			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-columns: repeat(3, 30%);/*1fr 1fr 1fr;*/
 			grid-gap: 5px 25px;
-				
+		
 			// тут background по центру иконка
 		}
 		.box{
 			margin-bottom: @widebottom;
 			text-align: center;
+
+			.date-title{
+				display:block;
+				margin: 0 auto;
+				color: @accentcolor;
+				text-transform: uppercase;
+				line-height: 1.8;
+			}
+
+			h3{
+			margin: 0 auto;
+				color: #000;
+				padding: 10px;
+			}
 		}
-		.date-title{
-			color: @accentcolor;
-			text-transform: uppercase;
-			line-height: 1.8;
-		}
+
 
 	}
 	.region-serving{
 		margin-bottom: @widebottom;
 		.grid{
 			grid-template-columns: 1fr 1fr 1fr;
-			grid-gap: @gutter;
+			grid-gap: @widebottom*2;
 			aling-items: center;
 			justify-items: center;
 
 		}
 		.box{
 			text-align: center;
-			
+		
+			.icon-serve{
+				text-align: center;
+				width: 100px;
+				margin: 0 auto;
+			}
 		}
+		.box-serving{
+			display: block;
+			min-height: 250px;
+			h3{
+				font-weight: 600;
+				color: #000;
+				padding-bottom: 10px;
+			}
+		}
+		
 	}
 
 	.about-us{
@@ -184,7 +250,8 @@ header{
 
 			
 			ul{
-			list-style-type: none;
+				list-style-type: none;
+
 			li a{
 				font-size: 15px;
 				font-weight: 600;
@@ -192,28 +259,52 @@ header{
 			}
 		}
 
-		.about-img{
+  		.about-img{
 			grid-area: about-img;
 			grid-row: 1 / 3;
-			justify-item: center;
+			text-align:center;
+			margin: @widebottom 0;
+			img{
+				border: 2px solid #11608c;
+				border-radius: 50%;
+				padding: 10px;
+			}
+			
 		}
 	}
 
 	.articles{
 		.grid{
-			grid-template-columns: repeat(2, minmax(30% 150px));
-			grid-gap: @gutter;
+			grid-template-columns: repeat(2, minmax(auto-fill, 250px));
+			grid-gap: @widebottom *2;
 			align-items: start;
-			display: flex;
+			/*display: flex;*/
 		}
 		.articles{
+			grid-row: 1/3;
+			.box{
+				.box;
+				margin-bottom: @gutter;
+
+				h4{
+					text-transform: uppercase;
+					/*line-height: 0.5;*/
+					
+				}
+			}
 			
 
 		}
 		.nav-articles{
-		
 			height: 84px;
 			width: 126px;
+			text-align: center;
+
+			img{
+				padding: @gutter;
+				max-width: 80px;
+				margin-bottom: @gutter;
+			}
 		}
 	}
 }
