@@ -117,58 +117,61 @@ header{
 
 // end header mainpage
 .box{
-			display: block;
-			box-sizing: border-box;
+	display: block;
+	box-sizing: border-box;
 }
 
 //content
 .content{
 	.main-news{
 		grid-template-columns: repeat(2, 47%);
-		grid-gap: @widebottom;
+		grid-gap: @gutter;
 	
 		.box{
 			.box;
-			min-height: 80px;
+			min-height: 100px;
 			min-width: 126px;
+			border: none;
 
   			.content-news{
   				display: flex;
+
   			}
 			.news-img{
 				padding-right: 10px;
 				padding-top: 10px;
 				img{
+					width: 150px;
+				    height: 100px;
 					border-radius: 4px;
 					object-fit: cover;
 				    overflow: hidden;
-					width: 150px;
-				    height: 100px;
-				    background-image: url("img/thumb_news.jpg");
-				    background-size: cover;
+					background-size: cover;
+				    background-position: center;
 				    background-repeat: no-repeat;
-				    background-position: 50% 50%;
 				}
 			}
 			h3{
-				color: #000;
+				color: #333;
 			}
 		}
 	}
 
 	.main-events{
 		background: #f9f3e7;
-		/*height: 720px;*/
+	/*	height: 420px;*/
 		margin-bottom: @widebottom;
 
 		.container{
-			vertical-align: bottom;
+			.title-center{
+				padding-top: 40px;
+			}
 
 		}
 		.grid{
 			grid-template-columns: repeat(3, 30%);/*1fr 1fr 1fr;*/
 			grid-gap: 5px 25px;
-		
+			align-content:center;
 			// тут background по центру иконка
 		}
 		.box{
@@ -184,7 +187,7 @@ header{
 			}
 
 			h3{
-			margin: 0 auto;
+				margin: 0 auto;
 				color: #000;
 				padding: 10px;
 			}
@@ -307,5 +310,3 @@ header{
 	}
 }
 // end content
-
-
