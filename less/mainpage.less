@@ -1,8 +1,10 @@
 @import "core";
 @import "fonts";
+@import "variables";
+@import "_mixins";
 
 body {
-  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+ /* font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
   font-weight: 400;
   overflow-x: hidden;
   overflow-y: auto;
@@ -42,6 +44,7 @@ header{
 .header-content{
 	min-height: 60vh;
 	position:relative;
+	align-content: center;
 
     .grid{
     	grid-template-columns: 1fr 1fr;
@@ -51,7 +54,8 @@ header{
     	grid-gap: 10px;
     	justify-content: center;
 			align-items: center;
-			vertical-align: middle;    }
+			vertical-align: middle;    
+	}
 
  .background-left{
 		grid-area: logo;
@@ -95,6 +99,7 @@ header{
 
 				button{
 					padding: 10px 17px;
+					border-radius: 10px;
 					font-size: 13px;
 					opacity: 0.8;
 					.transitions;
@@ -109,9 +114,8 @@ header{
 
 	.banner-img{
 		grid-area: img;
-	/*	align-self: center;*/
 		align-self: end;
-		background-size:cover;
+		background-size: cover;
 		background-position:center;
 		background-repeat: no-repeat;
 		height: 60vh; /*597px*/
@@ -140,33 +144,29 @@ header{
 	
 		.box{
 			.box;
-			min-height: 80px;/*100*/
-			min-width: 126px;
-			border: none;
-
+				padding-top: 0;
+				border: none;
+			a h3{
+				text-decoration: none;
+				line-height: 0.8;
+			}
+	
   			.content-news{
   				display: flex;
   				margin-top: 10px;
+  				p{
+  					padding-left: 10px;
+  				}
   			}
 			.news-img{
-				padding-right: 10px;
-
-				img{
-					width: 126px;
-				    height: 80px;
-					border-radius: 4px;
-					object-fit: cover;
-				    overflow: hidden;
-					background-size: cover;
-				    background-position: center;
-				    background-repeat: no-repeat;
-				}
+				width: 126px;
+				height: 80px;
+				overflow: hidden;
+  				border-radius: 4px;
+  				background-size: cover;
+				background-position: center;
 			}
-			h3 a{
-				color: #496B73;
-				font-size: 24px;
-				text-decoration: none;
-			}
+			
 			.dates *{
 				color: #737373;
 			}
@@ -188,7 +188,7 @@ header{
 			grid-template-columns: repeat(3, 30%);
 			grid-gap: @widemargin;
 
-			// тут background по центру иконка
+			// background по центру иконка
 		}
 		.box{
 			margin-bottom: @widemargin;
