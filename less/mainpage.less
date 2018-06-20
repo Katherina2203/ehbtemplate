@@ -49,15 +49,16 @@ header{
 						    "logo img"
 						    "logo underline";
     	grid-gap: 10px;
-    	justify-item: end;
-    	align-items: start;
-    }
+    	justify-content: center;
+			align-items: center;
+			vertical-align: middle;    }
 
  .background-left{
 		grid-area: logo;
-		grid-column: 1/3;
+		grid-columns: 1/3;
+		min-height: 60vh;
 	 	background-color: @headercolor;
- 	    align-self: start;
+ 	    padding-bottom: @gutter;
 	}
 
 	.container-logo{
@@ -108,11 +109,12 @@ header{
 
 	.banner-img{
 		grid-area: img;
+	/*	align-self: center;*/
 		align-self: end;
 		background-size:cover;
 		background-position:center;
 		background-repeat: no-repeat;
-		min-height: 60vh; /*597px*/
+		height: 60vh; /*597px*/
 		z-index: 1000;
 	}
 
