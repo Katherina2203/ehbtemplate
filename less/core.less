@@ -105,9 +105,8 @@ nav{
 		grid-template-areas: "menu social";
 		grid-gap: @gutter;
 	}
-}
 
-.menu{
+	.menu{
 	grid-area: menu;
  	.transitions;
 
@@ -137,14 +136,22 @@ nav{
 	}
 } 
 
-.social{
-	grid-area: social;
-	display: flex;
+	.social{
+		grid-area: social;
+		display: inline-flex;
+		justify-content: right;
+		vertical-align: middle;
 
-		vertical-align: baseline;
-
-	
+		a{
+		text-align: right;
+			margin: 0;
+			padding-right: 15px
+		}
+		
+	}
 }
+
+
 
 /* end menu*/
 
