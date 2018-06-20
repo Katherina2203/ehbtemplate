@@ -38,44 +38,49 @@ h3{
 //header mainpage
 header{
 	grid-area: header;
-	
+	min-height: 60vh;
 }
 
 .header-content{
-	min-height: 60vh;
+	background-color: @headercolor;
 	position:relative;
-	align-content: center;
-
+	align-items: center;
+	
     .grid{
     	grid-template-columns: 1fr 1fr;
-    	grid-template-areas: 
-						    "logo img"
-						    "logo underline";
-    	grid-gap: 10px;
-    	justify-content: center;
-			align-items: center;
-			vertical-align: middle;    
+
+    /*	justify-content: center;*/
+		align-items: center;
+
+	}
+	.mainleft{
+		position: relative;
+		width: 350px;
+		min-height: 60hv;
+		z-index: 99999;
+		left: -23%;
+		border: 1px solid orange;
+		&:after{
+	 	    	content: '';
+	    		position: absolute;
+	    		top:0;
+			    bottom: 0;
+			    right: -75px;
+			  	transform: skew(-20deg);
+	  			border-left: 10px solid #fff;
+				z-index: -99;
+ 	    	}
 	}
 
- .background-left{
-		grid-area: logo;
-		grid-columns: 1/3;
-		min-height: 60vh;
-	 	background-color: @headercolor;
- 	    padding-bottom: @gutter;
-	}
 
 	.container-logo{
 		color: #fff;
-		width: 30%;
-		margin-top: @widemargin;
-		position: relative;
-
+			
 		.logo{
 			width: 206px;
 			text-align: center;
 			margin-bottom:  @gutter;
-
+			
 			img{
 				margin: 0 auto;
 			}
@@ -111,19 +116,28 @@ header{
 			}
 		}
 	}
+	.header-right{
+		position: absolute;
+		left: 35%;
+		top: 0;
+		right: 0;
+		z-index: 9999;
 
+		border: 1px solid red;
+		
+
+
+	}
 	.banner-img{
-		grid-area: img;
-		align-self: end;
+		height: 55vh;
 		background-size: cover;
-		background-position:center;
+	/*	background-position:center;*/
 		background-repeat: no-repeat;
-		height: 60vh; /*597px*/
-		z-index: 1000;
+		 /*597px*/
+		 border-bottom: 10px solid #fff;
 	}
 
 	.background-img-underline{
-		grid-area: underline;
 		align-self: end;
 	 	background: linear-gradient(to right, @accentcolor, #f2e0ca);
 	 	height: 30px;
