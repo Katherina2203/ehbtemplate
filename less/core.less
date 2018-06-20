@@ -5,7 +5,7 @@
  */
  @import "variables";
  @import "_gallery";
-  @import "_mixins";
+ @import "_mixins";
 
 @import url('https://fonts.googleapis.com/css?lang=ru&family=Product+Sans|Roboto:400,700');
 
@@ -23,12 +23,16 @@ https://fonts.google.com/specimen/Roboto
 }
 
 body {
-  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  overflow-x: hidden;
-  overflow-y: auto;
+ 	 font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+ 	 font-weight: 400;
+ 	 overflow-x: hidden;
+ 	 overflow-y: auto;
+}
+h1{
+	font-size: 50px;
 }
 h3{
+	font-size: 25px;
 	color: #2784b2;
 	font-weight: 400;
 	line-height: 1.5;
@@ -164,7 +168,7 @@ nav{
 	}
 	
 	section{
-		margin-bottom: @widebottom;
+		margin-bottom: @widemargin;
 	}
 
 	/* breadcrumbs */
@@ -193,7 +197,7 @@ nav{
 
 	.ehb-content{
 		grid-area: ehbcontent;
-		margin-bottom: @widebottom;
+		margin-bottom: @widemargin;
 
 		.box{
 			min-height: 170px;
@@ -291,7 +295,7 @@ nav{
 
 	aside{
 		grid-area: sidebar;
-		margin-left: @widebottom;
+		margin-left: @widemargin;
 	}
 
 	//aside left menu
@@ -325,7 +329,7 @@ nav{
 
 		.church-info{	
 			width: 40%;
-			margin-bottom: @widebottom;
+			margin-bottom: @widemargin;
 
 			span{
 				font-weight: 600;
@@ -340,62 +344,4 @@ nav{
 }
 
 
-/*  footer  */
-footer{
-	grid-area: footer;
-	/*display: subgrid;*/
-	background-color: @maingray;
-	
-	padding: @gutter;
-
-	.grid{
-		grid-template-columns: 20% 20% 20% auto;
-		grid-gap: @gutter;
-
-
-	}
-	h3{
-		color: #fff;
-		.title-uppercase;
-	}
-	.long{
-		grid-row: 1/4;
-		input[type="text"]{
-			background-color: #f6f6f6;
-			padding: 3px;
-			color: #000;
-		}
-		input, button{
-			display: inline-block;
-			padding: 10px 17px;
-		}
-		button{
-		/*	border: none;*/
-		/*	background-color: #f6f6f6;*/
-			color: #000;
-			text-align: center;
-			opacity: 0.8;
-			.transitions;
-			&:hover, &:active, &:focus{
-				opacity: 1;
-			/*	background-color: #008CBA;*/
-			}
-			
-		}
-	}
-	ul li{
-	list-style-type: none;
-	}
-	a{
-		
-		text-decoration: none;
-		&:hover, &:focus, &:active{
-			text-decoration: underline;
-		}
-	}
-}
-footer * {
-	color: #fff;
-}
-/*  end footer  */
 @import "_media";
