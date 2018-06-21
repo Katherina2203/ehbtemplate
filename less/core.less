@@ -30,7 +30,9 @@ body {
  	 overflow-y: auto;
 }
 
-
+.grid{
+	display: grid;
+}
 
 .title-uppercase{
 	margin: @gutter 0;
@@ -99,36 +101,87 @@ nav{
 		grid-template-areas: "menu social";
 		grid-gap: @gutter;
 	}
-
 	.menu{
-	grid-area: menu;
- 	.transitions;
+		position: relative;
+		text-align: center;
+		.menu-icon{
+			display: none;
+			width: 45px;
+			height: 35px;
+			position: relative;
+			cursor: pointer;
+			span{
+				display: block;
+				position: absolute;
+				height: 9px;
+				width: 100%;
+				background: #333;
+				border-radius: 9px;
+				opacity: 1;
+				left: 0;
+				transform: rotate(0deg);
+				transition: .25s ease-in-out;
+				&:span:nth-child(1) {
+				  	top: 0px;
+				}
+				&:span:nth-child(2), &:span:nth-child(3){
+					top: 13px;
+				}
+				&:span:nth-child(4){
+					top: 26px;
+				}
+			}
+		}
+			.menu-state-open .menu-icon span:nth-child(1) {
+				top: 18px;
+				width: 0%;
+				left: 50%;
+			}
+			.menu-state-open .menu-icon span:nth-child(2) {
+				transform: rotate(45deg);
+			}
+			.menu-state-open .menu-icon span:nth-child(3) {
+				transform: rotate(-45deg);
+			}
+			.menu-state-open .menu-icon span:nth-child(3) {
+				top: 18px;
+			    width: 0%;
+			    left: 50%;
+			}
+			.menu-state-open .menu-links {
+			  display: block;  
+			}
 
-	ul{
-		display: flex;
-		justify-content: space-between;
-		    
-	}
-	li{
-		list-style-type: none;
+		
+		.menu-links{
+			float: left;
+			.transitions;
 			
-	}
-	li a{
-		text-decoration: none;
-		text-transform: uppercase;
-	}
-	ul li a{
-		color: #293036;
-		border-radius: 10px;
-		padding: 10px;
-		&:focus,
-		&:hover, &:active{
-				border: 1px solid @accentcolor;
-				
-				color: @accentcolor;
+			a{
+				display: inline-block;
+				color: #333;
+				text-decoration: none;
+				text-transform: uppercase;
+				border-radius: 10px;
+				padding: 10px;
+				line-height: 1.3;
+				&:focus,
+				&:hover, &:active{
+					border: 1px solid @accentcolor;
+					
+					color: @accentcolor;
+				}
+			}
+		
 		}
 	}
-} 
+	.medias{
+		display: none;
+	}
+
+
+
+
 
 	.social{
 		grid-area: social;

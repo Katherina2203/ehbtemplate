@@ -4,20 +4,23 @@
 		<meta charset="utf-8">
 		<meta http-equiv="Content-Type" content="IE=edge">
 		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
 		<title>ehb</title>
 		<link rel="stylesheet/less" href="css/mainpage.css">
 		<link rel="stylesheet/less" href="css/_footer.css">
 		<link rel="stylesheet/less" href="css/fonts.css">
-	  
+	 	<link href="https://fonts.googleapis.com/css?lang=ru&family=Product+Sans|Roboto:100,200,400,300,500,600,700" rel="stylesheet"> 
         <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.2/less.min.js" ></script>
 		
 	</head>
 	<body>
 	<div class="wrapper grid">
 		<header class="header-content grid">
-			
+				
 				<div class="container grid mainleft">
-	  				<div class="container-logo">
+				
+						<div class="container-logo">
 	  					<div class="logo">
 							<img src="img/logo.png" alt="">
 							<span class="small-description">Всеукраинский союз церквей евангельских христиан баптистов</span>
@@ -30,8 +33,10 @@
 								<button value="Online">Online трансляции</button>
 							</div>
 						</div>
-	  				</div>
-	  			</div>
+	  		
+					</div>
+				</div>
+				
 			
 				<div class="header-right">
 					<div class="banner-img" style="background-image: url(img/mainheader_kh.jpg)"></div>
@@ -44,14 +49,25 @@
 		<nav class="main-navigation">
 			<div class="container grid">
 				<div class="menu">
-				<ul>
-					<li><a href="">Главная</a></li>
-					<li><a href="">Об объединении</a></li>
-					<li><a href="">Служения</a></li>
-					<li><a href="">Новости</a></li>
-					<li><a href="">Статьи</a></li>
-					<li><a href="">Контакты</a></li>
-				</ul>
+					<div class="menu-icon">
+				      <span></span>
+				      <span></span>
+				      <span></span>
+				      <span></span>
+				    </div>
+
+					<div class="menu-links">
+						<a class="menu-links-item" href="">Главная</a>
+						<a class="menu-links-item" href="">Об объединении</a>
+						<a class="menu-links-item" href="">Служения</a>
+						<a class="menu-links-item" href="">Новости</a>
+						<a class="menu-links-item" href="">Статьи</a>
+						<a class="menu-links-item" href="">Контакты</a>
+					</div>
+				</div>
+				<div class="medias">
+					<a href=""><img src="img/church_icon.png" alt="" height="30px"></a>
+					<a href=""><img src="img/church_icon.png" alt="" height="30px"></a>
 				</div>
 				<div class="social">
 					<a href=""><img src="img/facebook_icon.png" alt="" height="30px"></a>
@@ -279,4 +295,14 @@
 		</div>
 	</body>
 </html>
-<link rel="stylesheet/less" media="screen" href="css/_media.css">
+	<link rel="stylesheet/less" href="css/_media.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+	(function($){
+	  $(function() {
+	    $('.menu-icon').on('click', function() {
+	      $(this).closest('.menu').toggleClass('menu-state-open');
+	    });
+	  });
+	})(jQuery);
+</script>

@@ -17,6 +17,11 @@ h3{
 .grid{
 	display: grid;
 }
+.container{
+	width: 1250px;
+	margin: 0 auto;
+}
+
 
 .title-center{
 	text-align: center;
@@ -56,10 +61,10 @@ header{
 	.mainleft{
 		position: relative;
 		width: 350px;
-		min-height: 60hv;
+		height: 100%;
 		z-index: 99999;
-		left: -23%;
-		border: 1px solid orange;
+		left: -22%;
+	/*	border: 1px solid orange;*/
 		&:after{
 	 	    	content: '';
 	    		position: absolute;
@@ -116,39 +121,34 @@ header{
 			}
 		}
 	}
+
 	.header-right{
 		position: absolute;
 		left: 35%;
 		top: 0;
 		right: 0;
-		z-index: 9999;
-
-		border: 1px solid red;
-		
-
-
+		z-index: 999;
+		height: 100%;
 	}
+
 	.banner-img{
-		height: 55vh;
+		min-height: 55.5vh;
 		background-size: cover;
 	/*	background-position:center;*/
 		background-repeat: no-repeat;
 		 /*597px*/
-		 border-bottom: 10px solid #fff;
+		border-bottom: 10px solid #fff;
 	}
 
 	.background-img-underline{
 		align-self: end;
 	 	background: linear-gradient(to right, @accentcolor, #f2e0ca);
-	 	height: 30px;
+	 	height: 3vh;/*30px;*/
 	}
   }
 
 // end header mainpage
-.box{
-	display: block;
-	box-sizing: border-box;
-}
+
 
 //content
 .content{
@@ -160,8 +160,9 @@ header{
 			.box;
 				padding-top: 0;
 				border: none;
+			h3 *{text-decoration: none;}
 			a h3{
-				text-decoration: none;
+				/* text-decoration: none; */
 				line-height: 0.8;
 			}
 	
@@ -189,8 +190,7 @@ header{
 
 	.main-events{
 		background: #f9f3e7;
-		min-height: 55vh;/*722px;*/
-		padding-bottom: @widemargin;
+		min-height: 50vh;/*722px;*/
 
 		.container{
 			.title-center{
