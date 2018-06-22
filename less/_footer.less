@@ -1,7 +1,6 @@
 @import "variables";
 @import "_mixins";
 
-/*  footer  */
 footer *{
 	color: #fff;
 }
@@ -13,7 +12,7 @@ footer{
 	padding: @gutter;
 
 	.grid{
-		grid-template-columns: 20% 20% 20% auto;
+		grid-template-columns: 20% 22% 20% auto;
 		grid-gap: @gutter;
 
 
@@ -24,7 +23,6 @@ footer{
 		text-decoration: uppercase;
 	}
 	.long{
-
 		input[type="text"]{
 			padding: 5px 10px;
 			color: #000;
@@ -33,22 +31,21 @@ footer{
 			color: #fff;
 			background-color: #c0cacf;
 			border: 1px solid #82c2f5;
-			border-radius: 4px;
+			border-radius: 5px;
 		}
 		input, button{
 			display: inline-block;
 			padding: 10px 17px;
 		}
 		button{
-		/*	border: none;*/
-		/*	background-color: #f6f6f6;*/
 			color: #000;
 			text-align: center;
 			opacity: 0.8;
 			.transitions;
+			border-radius: 5px;
 			&:hover, &:active, &:focus{
 				opacity: 1;
-			/*	background-color: #008CBA;*/
+
 			}
 		}
 
@@ -68,5 +65,3 @@ footer{
 		}
 	}
 }
-
-/*  end footer  */

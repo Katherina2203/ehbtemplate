@@ -72,12 +72,11 @@ body{
         grid-gap: @gutter;
 	}
 
-
-
-
 .container{
-	width: 1250px;
+	max-width: 1250px;
+	width: 100%;
 	margin: 0 auto;
+	position: relative;
 }
 
 nav{
@@ -105,59 +104,41 @@ nav{
 		position: relative;
 		text-align: center;
 		.menu-icon{
-			display: none;
-			width: 45px;
-			height: 35px;
-			position: relative;
-			cursor: pointer;
+		//	display: block;
+		//	width: 45px;
+		//	height: 35px;
+		//	position: relative;
+		//	cursor: pointer;
 			span{
-				display: block;
-				position: absolute;
-				height: 9px;
-				width: 100%;
+				display: none;
+				height: 4px;
+ 				width: 35px;
 				background: #333;
-				border-radius: 9px;
-				opacity: 1;
-				left: 0;
-				transform: rotate(0deg);
-				transition: .25s ease-in-out;
-				&:span:nth-child(1) {
-				  	top: 0px;
-				}
-				&:span:nth-child(2), &:span:nth-child(3){
-					top: 13px;
-				}
-				&:span:nth-child(4){
-					top: 26px;
-				}
+				border-radius: 2px;
+				margin-bottom: 7px;
+				margin-top: 2px;
+				transform-origin: 4px 0px;
+				transition: transform 0.5s ease;
 			}
 		}
 			.menu-state-open .menu-icon span:nth-child(1) {
-				top: 18px;
-				width: 0%;
-				left: 50%;
+				transform: rotate(-45deg) translate(0px, -3px);
 			}
 			.menu-state-open .menu-icon span:nth-child(2) {
-				transform: rotate(45deg);
+				transform: rotate(0deg) scale(0.2, 0.2);
 			}
 			.menu-state-open .menu-icon span:nth-child(3) {
-				transform: rotate(-45deg);
-			}
-			.menu-state-open .menu-icon span:nth-child(3) {
-				top: 18px;
-			    width: 0%;
-			    left: 50%;
+				transform: rotate(45deg) translate(0px, 0px);
 			}
 			.menu-state-open .menu-links {
 			  display: block;  
 			}
 
-		
 		.menu-links{
 			float: left;
 			.transitions;
 			
-			a{
+			.menu-links-item{
 				display: inline-block;
 				color: #333;
 				text-decoration: none;
@@ -172,25 +153,27 @@ nav{
 					color: @accentcolor;
 				}
 			}
-		
 		}
 	}
 	.medias{
+		grid-area: media;
+		position: relative;
 		display: none;
+		vertical-align: middle;
+		a{
+			text-align: right;
+			margin: 0;
+			padding-right: 15px
+		}
 	}
-
-
-
-
-
 	.social{
 		grid-area: social;
+		position: relative;
 		display: inline-flex;
 		justify-content: right;
 		vertical-align: middle;
-
 		a{
-		text-align: right;
+			text-align: right;
 			margin: 0;
 			padding-right: 15px
 		}
