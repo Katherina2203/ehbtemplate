@@ -1,27 +1,58 @@
-@media only screen and (min-width: 1024px) and (max-width: 1250px){
 @import "variables";
 @import "_mixins";
+
+@media only screen and (max-width: 1024px)and (max-width: 1250px){
+	.container-logo{
+		max-width: 312px;
+		padding-top: 35px!important;
+		h2{
+			position: relative;
+			z-index: 9999;
+			font-size:24!important;
+		}
+	}
+	.description{
+		p{display: none;}		
+		.header-buttons{display: none;}	
+	}
+	main-navigation{
+
+	border: 1px solid blue;
+		.grid{
+				grid-template-columns: repeat(3, 1fr);
+		   		grid-template-areas: "social media menu";
+			}
+	}
+	.menu{
+		.menu-icon{
+			justify-content: left;
+			span{
+				display: block !important;
+			}
+		}
+	}
+	.medias{
+		width: 123px;
+		display: inline-flex !important;
+		border: 1px solid red;
+	}
+	.main-news{
+		
+			width: 95% !important;
+			.box{
+				margin-bottom: 10px;
+			}	
+		}
 }
 	@media only screen and (max-width: 992px){
-		.mainleft{
-
-			.container-logo{
-				padding-top: 25px; 
-		
-				.description{
-					max-width: 450px!important;
+		.description{
+			h2{
+				font-size: 25px;
+				line-height: 1.3;
+				white-space: nowrap;
 				}
-				h2{
-				
-					font-size: 37px;
-					line-height: 1.5!important;
-					white-space: nowrap;
-				}
-			 	p{display: none;}
-			}
+			p{display: none;}		
 			.header-buttons{display: none;}
-		}
-
 		.header-right{
 			.banner-img{		
 				height: 100%;		
@@ -59,7 +90,7 @@
 			display: none;
 		}
 		.main-news{
-			padding: 0 15px;
+	
 			width: 95% !important;
 			.box{
 				margin-bottom: 10px;
@@ -163,7 +194,9 @@
 	}
 	.main-news{
 		grid-teplate-columns: 1fr!important;
-		grid-row: initial!important;
+		//grid-row: initial!important;
+		grid-auto-rows: auto;
+	
 	}
 	.main-events{
 		.grid{
@@ -186,7 +219,16 @@
 	}
 
 	@media only screen and (min-width: 480px){
-	
+	.header-left{max-width: 461px;}
+	.container-logo{
+		max-width: 312px;
+		padding-top: 35px!important;
+		h2{
+			position: relative;
+			z-index: 9999;
+			font-size:24!important;
+		}
+	}
 	.main-events{
 		.box{
 
@@ -209,5 +251,17 @@
 	}
 
 	@media only screen and (max-width: 320px){
-
+		.container-logo{
+		h2{font-size:24!important;}
+	}
+		.main-news{
+			.grid{
+				grid-template-columns: 1fr!important;
+				grid-column: 1 / 2;
+	  			grid-row: initial;
+				}
+			.grid *{
+				width: 100%;
+			}
+		}
 	}/*  end width: 320px  */
