@@ -85,7 +85,11 @@ nav{
 
 .main-navigation{
 	border: 1px solid green;
-	
+	position: relative;
+	grid-template-columns: repeat(2, minmax(85%, 15%));
+	grid-template-areas: "menus social";
+	grid-gap: 10px;
+
 	.search{
 		input{
 			height: 39px;
@@ -93,24 +97,18 @@ nav{
 		}
 	}
 
-	.grid{
-		grid-template-column: repeat(2, minmax(80% 20%));
-		grid-gap: 10px;
-	}
 	.menu{
-		position: relative;
-		display: inline-block;
+		grid-area: menus;
 		vertical-align: middle;
-		align-content: center;
-		line-height: 1.5;
 		border: 1px solid red;
+	/*	.transitions;*/
 
 		.menu-icon{
-		//	display: block;
-		//	width: 45px;
-		//	height: 35px;
-		//	position: relative;
-		//	cursor: pointer;
+			display: block;
+			width: 45px;
+			height: 35px;
+			position: relative;
+			cursor: pointer;
 			span{
 				display: none;
 				height: 4px;
@@ -137,9 +135,8 @@ nav{
 			}
 
 		.menu-links{
-			float: left;
+		/*	float: left;*/
 			.transitions;
-			
 			.menu-links-item{
 				display: inline-block;
 				color: #333;
@@ -162,6 +159,7 @@ nav{
 		position: relative;
 		display: none;
 		vertical-align: middle;
+
 		a{
 			text-align: right;
 			margin: 0;
@@ -171,11 +169,15 @@ nav{
 	.social{
 		grid-area: social;
 		position: relative;
-		display: inline-flex;
-		 flex-wrap: nowrap;
+		display: inline-block;
+		height: 30px;
+		/* flex-wrap: nowrap;*/
+		align-content: right;
 		justify-content: right;
 		vertical-align: middle;
+
 		a{
+			border: 1px solid gray;
 			text-align: right;
 			margin: 0;
 			padding-right: 15px
@@ -183,23 +185,17 @@ nav{
 		
 	}
 }
-
-
-
 /* end menu*/
 
 /*  content  */
-
 .content{
 	grid-area: content;
+	grid-template-areas: "ehbcontent sidebar";
 	min-height: 100%;
-	h2{
-		padding: 15px 0;
-	}
+	h2{padding: 15px 0;}
 
-	p{
-	 	word-break: break-word;
-	}
+	p{word-break: break-word;}
+
 	.dates, a{
 		font-size: 10px;
 		padding: 5px 0 10px;
@@ -230,9 +226,7 @@ nav{
 
 	.grid{
 		display: grid;
-		grid-template-columns: auto 250px;
-		grid-template-areas: "ehbcontent sidebar";
-		align-content: end;
+		/*grid-template-areas: "ehbcontent sidebar";*/
 	}
 
 	.ehb-content{
@@ -301,12 +295,10 @@ nav{
 		grid-gap: @gutter;
 		.tabs{
 			align-content:left;
-			
 
 			button{
 
 				background-color: inherit;
-			  
 			    border: none;
 			    outline: none;
 			    cursor: pointer;
@@ -383,5 +375,3 @@ nav{
 	
 }
 
-
-@import "_media";
