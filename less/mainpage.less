@@ -1,7 +1,7 @@
-/*@import "core";*/
 @import "fonts";
 @import "variables";
 @import "_mixins";
+@import "core";
 
 /*@import "media";*/
 body {
@@ -46,32 +46,32 @@ header{
 	grid-area: header;
 }
 .header-content{
-	background-color: @headercolor;
+	/*background-color: @headercolor;*/
 	background-position: center;
 	position: relative;
 	max-height: 60vh;
 	height: 100%;
-	width: 100%;
-	align-content: center;
+	/*width: 100%;*/
+
 
 	.header-left{
 		position: relative;
-		max-width: 520px;
-		width: 100%;
+		max-width: 620px;
+		width: 55%;
 		min-height: 60vh;
 		height: 100%;
-		z-index: 9999;
+		z-index: 999;
 		box-sizing: border-box;
 		vertical-align: middle;
 	}
 	.header-triangle{
 		float: right;
 		position: relative;
-		z-index: -99;
-		width: 130px;
+		z-index: -999;
+		width: 190px;
 		height: 60vh;
 		background-image: url(@img-path);
-		transform: skewX(-14deg);
+		transform: skewX(-13deg);
 		box-sizing: border-box;
 		border-right: 10px solid #fff;
 
@@ -81,13 +81,13 @@ header{
 		position:relative;
 		z-index: 9999;
 		color: #fff;
-		max-width: 350px;
+		max-width: 420px;
 		width: 100%;
 		padding-top: 65px;
 		display: inline-block;
 		box-sizing: border-box;
-		vertical-align: middle;
 		box-sizing: border-box;
+		overflow-y: visible;
 		.logo{
 			max-width: 206px;
 			text-align: center;
@@ -117,7 +117,7 @@ header{
 					font-size: 13px;
 					font-width: 500;
 					opacity: 1;
-					
+				
 					.transitions;
 
 					&:hover, &:focus{
@@ -129,9 +129,13 @@ header{
 				
 					img{
 						display: inline-block;
-						vertical-align: middle;
+				
+
 						padding-right: 5px;
 						width: 25px;
+					}
+					>a{
+						vertical-align: middle;
 					}
 				}
 			}
@@ -144,7 +148,7 @@ header{
 		right: 0;
 		z-index: 9;
 		height: 60vh;
-		width: 63%;
+		width: 55.5%;
 		background: linear-gradient(to right, @accentcolor, #f2e0ca);
 	}
 	.banner-img{
@@ -185,7 +189,7 @@ header{
 				width: 126px;
 				height: 80px;
 				overflow: hidden;
-  				border-radius: 4px;
+  				border-radius: @box-border-radius;
   				background-size: cover;
 				background-position: center;
 			}

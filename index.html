@@ -13,10 +13,19 @@
 	 	<link href="https://fonts.googleapis.com/css?lang=ru&family=Product+Sans|Roboto:100,200,400,300,500,600,700" rel="stylesheet"> 
         <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.2/less.min.js" ></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		
+        
+		<script type="text/javascript">
+			 $(document).ready(function(){
+			  $(function() {
+			    $('.menu-icon').on('click', function() {
+			      $(this).closest('.menu').toggleClass('menu-state-open');
+			    });
+			  });
+			})(jQuery);
+		</script>
 	</head>
 	<body>
-	<div class="wrapper grid">
+	<div class="wrapper">
 		<header class="header-content" style="background-image: url(img/back_head.png)">
 			<div class="header-right">
 				<div class="banner-img" style="background-image: url(img/mainheader_kh.jpg)"></div>
@@ -45,12 +54,6 @@
 				
 		<nav class="main-navigation grid container">
 			<div class="menu">
-				<div class="menu-icon">
-				    <span></span>
-				    <span></span>
-				    <span></span>
-				</div>
-
 				<div class="menu-links">
 					<a class="menu-links-item" href="">Главная</a>
 					<a class="menu-links-item" href="">Об объединении</a>
@@ -59,10 +62,15 @@
 					<a class="menu-links-item" href="">Статьи</a>
 					<a class="menu-links-item" href="">Контакты</a>
 				</div>
+				<div class="menu-icon">
+				    <span></span>
+				    <span></span>
+				    <span></span>
+				</div>
 			</div>
 			<div class="medias">
-					<a href=""><img src="img/church_i.png" alt="" height="30px"></a>
-					<a href=""><img src="img/online_i.png" alt="" height="30px"></a>
+					<a href=""><img src="img/church_i.png" alt="" height="30px" weight="30px"></a>
+					<a href=""><img src="img/online_i.png" alt="" height="30px" weight="30px"></a>
 			</div>
 			<div class="social">
 					<a href=""><img src="img/facebook_icon.png" alt="" height="30px"></a>
@@ -288,12 +296,4 @@
 </html>
 
 
-<script type="text/javascript">
-	(function($){
-	  $(function() {
-	    $('.menu-icon').on('click', function() {
-	      $(this).closest('.menu').toggleClass('menu-state-open');
-	    });
-	  });
-	})(jQuery);
-</script>
+
