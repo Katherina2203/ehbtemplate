@@ -63,8 +63,7 @@ body{
 }
 
 .wrapper{
-	margin: 0;
-	padding: 0;
+
 	/*	grid-template-columns: repeat(2, 1fr);*/
 	/*    grid-template-rows: 1fr minmax(1em, auto);*/
 	/*    grid-template-areas: "header header"
@@ -84,15 +83,15 @@ body{
 
 nav{
 	grid-area: menu;
+	margin-top: @gutter*2;
 }
 
 .main-navigation{
-
 	position: relative;
 	grid-template-columns: repeat(2, minmax(85%, 15%));
 	grid-template-areas: "menus social";
 	max-height: 50px;
-	margin: @gutter 0;
+
 	.search{
 		input{
 			height: 39px;

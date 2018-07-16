@@ -1,0 +1,152 @@
+@media only screen and (max-width: 1250px){
+	header {
+		.logo{
+			padding-left: 15px;
+		}
+		span{
+			font-size: 1em;
+			width: 60%;
+		}
+
+	}
+	.home .description {
+		padding-left: 15px;
+	}
+	.section, {
+		padding-left: 15px;
+	}
+	footer{
+		padding: 0 15px;
+		.right{
+			padding-right: 15px;
+		}
+	}
+	.resources .container{
+		.articles{
+			grid-column-gap: 20px;
+			padding: 0 15px;
+		}
+	} 
+}
+@media only screen and (max-width: 1148px) {
+	header.home{
+		padding-top: 15px;
+		.buttons{
+			font-size: 0.8em;
+		}
+	}
+	.home .description{
+		p{
+			display: none;
+		}
+	}
+	.main-nav{
+		.nav-links{
+			.nav-links-item{
+				font-size: 0.8em;
+			}
+		}
+	}
+	
+}
+
+@media only screen and (max-width: 1024px) {
+	header{
+		span{
+			font-size: 0.8em;
+		}
+	}
+
+	.main-nav{
+		align-self: top;
+		.nav-icon{
+			display: block;
+		}
+		.nav-links{
+			display: none;
+		}
+		.nav-state-open{
+			.nav-links{
+			  /*  position: fixed;*/
+			    display: block;
+			    top: 0;
+			    right: 0;
+			    margin-top: 0;
+			    background-color: rgba(0, 0, 0, 0.8);
+			    z-index: 1000;
+			    overflow: auto;
+			}
+		    .nav-links-item {
+			    display: block;
+			    padding: 10px 0;
+			    text-align: center;
+			    color: #ffffff;
+			}
+			.nav-icon span:nth-child(1) {
+		    top: 18px;
+		    width: 0%;
+		    left: 50%;
+			}
+
+			.nav-icon span:nth-child(2) {
+			    transform: rotate(45deg);
+			}
+
+			.nav-icon span:nth-child(3) {
+			    transform: rotate(-45deg);
+			}
+
+			.nav-icon span:nth-child(4) {
+			    top: 18px;
+			    width: 0%;
+			    left: 50%;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 992px){
+	header.home{
+		.logo a{font-size: 0.8em;}
+	}
+	.news .container .articles {
+		grid-gap: 20px;
+	}
+	main>section {
+		margin: 20px 0 20px;
+	}
+	section .container, .container articles{
+		padding: 0 12px;
+	}
+	
+}
+@media only screen and (max-width: 950px){
+	.home .description {
+		margin-top: 30px;
+		.buttons>a{
+       		overflow: visible;
+    	}
+	}
+
+}
+@media only screen and (max-width: 768px){
+	
+}
+
+@media only screen and (max-width: 600px){
+	article{
+		.content p a.more{
+			margin-top: 20px;
+		} 
+
+	}
+}
+
+@media only screen and (min-width: 480px){
+
+}
+	
+@media only screen and (max-width: 320px){
+		
+
+}/*  end width: 320px  */
