@@ -136,7 +136,26 @@
 
 }
 @media only screen and (max-width: 768px){
-	
+	.header {
+		grid-template-columns: repeat(auto-fill, 1fr);
+		grid-template-rows: repeat(auto-fill, 1fr);
+	}
+	.home .description {
+		margin-top: 20px;
+		h1 {
+	        font-size: 1.8em;
+	        font-weight: 500;
+	    }
+	   .buttons a{
+	   	
+	   		&:first-child{
+				display: none;
+	   		}
+	   		&:nth-child(2){
+				display: none;
+	   		}
+	   }
+	}
 }
 
 @media only screen and (max-width: 600px){
@@ -146,6 +165,8 @@
 		} 
 
 	}
+	
+
 }
 
 @media only screen and (min-width: 480px){
