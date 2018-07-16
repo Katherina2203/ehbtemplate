@@ -60,23 +60,28 @@
 	.main-nav{
 		align-self: top;
 		.nav-icon{
-			display: block;
+			display: inline-block;
+			position: absolute;
+			top: 20px;
+			right: 15px;
+			cursor: pointer;
 		}
 		.nav-links{
 			display: none;
 		}
+		}
 		.nav-state-open{
 			.nav-links{
-			  /*  position: fixed;*/
+			    position: relative;
 			    display: block;
-			    top: 0;
+			    top: 40px;
 			    right: 0;
 			    margin-top: 0;
 			    background-color: rgba(0, 0, 0, 0.8);
 			    z-index: 1000;
 			    overflow: auto;
 			}
-		    .nav-links-item {
+		    .nav-links {
 			    display: block;
 			    padding: 10px 0;
 			    text-align: center;
@@ -102,7 +107,7 @@
 			    left: 50%;
 			}
 		}
-	}
+	
 }
 
 @media only screen and (max-width: 992px){
@@ -127,6 +132,7 @@
        		overflow: visible;
     	}
 	}
+
 
 }
 @media only screen and (max-width: 768px){
